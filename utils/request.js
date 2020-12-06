@@ -29,7 +29,7 @@ function callback(error, response, body)
   {
     const len = Object.keys(response).length
     for(var i=0;i<len;i++)
-    { 
+    {
       if(response.body[i].current_status_code=='DEL')
       delivered++;
       if(response.body[i].current_status_code=='INT')
