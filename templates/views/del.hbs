@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+
+</head>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  li {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  ul:nth-child(even) {
+    background-color: #dddddd;
+  }
+</style>
+{{>header}}
+
+<h1>Delivered:  {{delivered}}</h1>
+<table id="table" class="hidden">
+  <tr>
+    <th>AWN NUMBER </th>
+    <th>TRANSPORTER </th>
+    <th>SOURCE </th>
+    <th>DESTINATION</th>
+    <th>START DATE</th>
+    <th>ETD</th>
+    <th>STATUS</th>
+  </tr>
+</table>
+{{#each result}}
+<ul>
+  <li>{{this}}</li>
+</ul>
+{{/each}}
+
+</html>
